@@ -1,0 +1,104 @@
+{% extends 'gshop/base.html' %}
+
+{% block content %}
+<div class="row" style="font-family: 'Free Helvetian'">
+    <div class="text-dark p-3 w-50 col-md-8 mx-auto">
+        <div class="text-dark text-center p-3">
+            <h1 class="display-4 fw-bolder mt-3">Toy Factory</h1>
+            <p class="h3 mt-3">Источник лучших игрушек для детей!</p>
+            <p class="h5 mt-5">Присоединяйтесь к нам и откройте мир радости и воображения для ваших детей! Посмотрите наш каталог игрушек и сделайте заказ уже сегодня.</p>
+            <a href="{% url 'all_products' %}" class="btn btn-warning mt-3 btn-lg" style="width: 200px">Каталог</a>
+        </div>
+    </div>
+</div>
+
+<!-- Последняя статья -->
+<article>
+    <div class="article-preview mt-3" style="padding-left: 30px">
+        <a class="nav nav-link" href="{% url 'news' %}"><h3 class="text-dark"><u><b>Последняя статья</b></u></h3></a>
+        <blockquote class="border-start border-4 border-warning">
+            <div class="p-3">
+                <h4>"Новые творческие подходы в мире игрушек"</h4>
+                <pre class="mt-3"><b>Анонс:</b> "Узнайте о последних инновациях и творческих подходах в производстве игрушек нашей фабрики.
+                    Новые продукты, уникальные идеи и радость для детей ждут вас в наших статьях."</pre>
+            </div>
+        </blockquote>
+    </div>
+</article>
+
+<!-- Реклама -->
+<section class="p-4" style="max-width: 1300px">
+    <div class="card mb-3" >
+        <div class="row g-0">
+            <div class="col-md-4" style="max-width: none">
+                <img src="https://romi.center/wp-content/uploads/2020/09/Яндекс-Директ-баннеры.png" class="img-fluid rounded-start m-3" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body" style="margin-left: 20px">
+                    <span style="color: rgba(0,0,0,0.47)"><b>Читать также</b></span>
+                    <h5 class="card-title h3"><strong>Яндекс.Директ баннеры: преимущества и нюансы создания</strong></h5>
+                    <p class="card-text">Что такое баннер? Статичное или динамичное изображение либо видеореклама, которые содержат
+                        информацию о товаре или услуге и отправляют пользователя на сайт рекламодателя …</p>
+                    <a href="https://romi.center/ru/learning/article/yandeks-direkt-banneri-preimushtestva-i/">Еще</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Партнеры -->
+<section class="m-3 justify-content-center" style="max-width: 1400px">
+    <h2 class="text-center"><strong>Наши партнеры</strong></h2>
+    <style>
+        .carousel-control-prev, .carousel-control-next {
+            background-color: rgba(0,0,0, 0.2);
+            max-width: 70px;
+        }
+        img {
+            max-width: 500px;
+            max-height: 200px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    </style>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner mt-3">
+            <div class="carousel-item active">
+                <div class="row g-3 justify-content-center">
+                    <div class="col-auto">
+                        <a href="#"><img src="https://brand-info.com.ua/wp-content/uploads/2019/12/fabrika-detskoj-igrushki-logo-800x442.jpg" class="d-block" alt="..."></a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#"><img src="https://play-lh.googleusercontent.com/kpYYNGFjF-XVUZ_CcsyGtDWCoGBK5Otakr0thMHskk4kgIo7IOaIgfJMkBekHxGr-w" class="d-block" alt="..."></a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/ru/thumb/1/1c/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9E%D0%90%D0%9E_%D0%92%D0%95%D0%A1%D0%9D%D0%90.jpg/800px-%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9E%D0%90%D0%9E_%D0%92%D0%95%D0%A1%D0%9D%D0%90.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row g-2 justify-content-center">
+                    <div class="col-auto">
+                        <a href="#"><img src="https://uploads.turbologo.com/uploads/design/hq_preview_image/150617/draw_svg20210814-32701-1obhzfu.svg.png" class="d-block" alt="..."></a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#"><img src="https://brand-info.com.ua/wp-content/uploads/2019/11/myakishi-logo-800x442.png" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#"><img src="https://img.freepik.com/premium-vector/santa-s-toy-factory-north-pole-grunge-rubber-stamp-design-with-white-background_560834-1070.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div>
+</section>
+
+{% endblock content %}

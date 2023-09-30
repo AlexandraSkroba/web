@@ -1,0 +1,61 @@
+{% extends 'gshop/base.html' %}
+
+{% block content %}
+
+
+<section class="row">
+    <h2 class="text-center mt-3"><b>NEWS!</b></h2>
+    <div class="m-3 col-md-8 mx-auto text-light mt-3">
+        <div class="card bg-dark p-3" style="width: 60rem;">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="card-img-top" src="https://kinder-city.com.ua/wa-data/public/shop/products/29/96/119629/images/704443/704443.970.jpg"
+                         alt="magic forest" style="width: 310px; height: 200px">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title"><strong>Новая коллекция игрушек: Волшебный лес</strong></h4>
+                    <p class="card-text">Погрузитесь в волшебный мир леса с нашей новой коллекцией игрушек.
+                        От магических единорогов до веселых лесных животных – у нас есть всё для вашего ребенка.</p>
+                    <a href="#" style="color: #c4c7c5;"><b>Читать далее</b></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-dark p-3 mt-3" style="width: 60rem;">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="card-img-top" src="https://ndplay.ru/image/cache/catalog/news/photo/2021-08-20/igrovye_nabory_dlya_detej_1-850x410.jpg"
+                         alt="igrovye_nabory" style="width: 310px; height: 200px">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title"><strong>Игровые наборы: Фантазии без границ</strong></h4>
+                    <p class="card-text">Дайте волю воображению вашего ребенка с нашими удивительными игровыми наборами.
+                        От городских приключений до космических путешествий, у нас есть всё, что нужно для веселой игры.</p>
+                    <a href="#" style="color: #c4c7c5;"><b>Читать далее</b></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section>
+    {% for n in news %}
+    <article itemscope itemtype="https://schema.org/NewsArticle"></article>
+        <h3 itemprop="headline">{{ n.name }}</h3>
+        <div>
+            <p itemprop="description">{{ n.brief_description }}</p>
+        </div>
+        <a href={{ n.url }}>Read more</a>
+    </article>
+    <hr>
+    {% endfor %}
+</section>
+
+
+    </div>
+</section>
+
+
+{% endblock %}
